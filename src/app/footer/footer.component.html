@@ -1,0 +1,37 @@
+<div  class="footer" fxLayout="row">
+    <div fxFlex="25%" class="social" fxLayout="column" fxLayoutGap="gappx">
+        <div>
+            <h2>Siguenos en:</h2> 
+            <a href="https://www.facebook.com/saguvet"  fxLayoutAlign="space-around start" target="_blank"><mat-icon>facebook</mat-icon></a>
+            
+        </div>
+    </div>
+    <div fxFlex="25%"  > 
+        <div fxLayout="column" class="info" >
+            <h2>Información</h2> 
+                <mat-list >
+                    <mat-list-item>
+                    <mat-icon mat-list-icon>call</mat-icon>
+                    <div mat-line>0983875949</div>
+                    <div mat-line class="sizeText">0987965321</div>
+                    </mat-list-item>
+                    <mat-list-item >
+                    <mat-icon mat-list-icon>email</mat-icon>
+                    <div mat-line>vetsagu@gmail.com</div>
+
+                    </mat-list-item>
+                    <mat-list-item >
+                        <mat-icon mat-list-icon>location_on</mat-icon>
+                        <div mat-line>General Pintag y Gatazo Oe6-180</div>
+                        <div mat-line>Sector la Magdalena</div>
+                    </mat-list-item>
+                </mat-list>
+        </div>
+    </div>
+    <div fxFlex="50%" class="map">
+        <h2>Ubicación:</h2> 
+        <google-map [height]="200" [width]="500" [center]="position" fxLayoutAlign="center start">
+            <map-marker [position]= "position"></map-marker>
+        </google-map>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+img{
+    border-radius: 2rem;
+    height: 25vh;
+    width: auto;
+}
+
+.mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button, .mat-fab, .mat-mini-fab {
+    font-size: 20px;
+}
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+    background-color: #de77a6;
+}
+
+.menu button{
+    height: 50px;
+    width: 90%;
+
+}
+.menu button:hover{
+    background-color: #de77a6;
+    color: white;
+}

@@ -1,0 +1,42 @@
+.footer{
+    background-color: #4af2bd;
+}
+.info{
+    h2{
+        font-family: "Roboto";
+        text-align: center;
+        font-weight: 550;
+    }
+    p{
+        font-family: "Roboto";
+    }
+    .sizeText{
+        font-size: 16px;
+    }
+}
+
+.social{
+    h2{
+        font-family: "Roboto";
+        text-align: center;
+        font-weight: 550;
+    }
+    a{
+        text-decoration: none;
+        color:black;
+    }
+    a:hover{
+        opacity: .6;
+    }
+    mat-icon{
+        font-size: 40px;
+    }
+}
+
+.map{
+    h2{
+        font-family: "Roboto";
+        text-align: center;
+        font-weight: 550;
+    }
+}
