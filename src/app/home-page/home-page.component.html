@@ -1,8 +1,49 @@
-<div >
-    <div  fxLayout="row" fxLayoutAlign="space-around center" >
-        <p>Al salir no olvides tu mascarilla</p>
-        <img src="../../assets/Logo/home.PNG" alt="">
-      
+<div>
+    <div  fxLayout="row" fxLayoutAlign="center center" >
+        <swiper [config]="configs" fxLayoutAlign="center center">
+            <div class="slider" *ngFor="let item of dataHomepage" [style.background-image]="'url('+item.swiper+')'"> 
+                <P  fxLayoutAlign="start center">Nosotros tambien somos tu familia
+                    ,
+                </P>           
+            </div>
+            
+        </swiper> 
+    </div>   
+    <div>
+        <mat-grid-list cols="3" rowHeight="2:1" >
+            <mat-grid-tile >
+                <div fxLayout="column" fxLayoutAlign="center center">
+                    <img src="../../assets/Icons/consultation.png" alt="">
+                    <p>Consultas</p>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div fxLayout="column" fxLayoutAlign="center center">
+                    <img src="../../assets/Icons/medicine.png" alt="">
+                    <p>Medicina preventiva</p>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div fxLayout="column" fxLayoutAlign="center center">
+                    <img src="../../assets/Icons/General.png" alt="">
+                    <p>Cirugía General</p>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div fxLayout="column" fxLayoutAlign="center center">
+                    <img src="../../assets/Icons/laboratory.png  " alt="">
+                    <p>Servicio de laboratorio</p>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div fxLayout="column" fxLayoutAlign="center center">
+                    <img src="../../assets/Icons/ultrasound.png" alt="">  
+                    <p>Ecografía e Imagenología</p>
+                </div> 
+            </mat-grid-tile>
+          </mat-grid-list>
     </div>
-    
+    <div class="infoButton" fxLayoutAlign="center center">
+        <button mat-stroked-button>MÁS INFORMACIÓN</button>
+    </div>   
 </div>
