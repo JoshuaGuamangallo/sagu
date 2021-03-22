@@ -1,23 +1,38 @@
-p{
-    font-family: "Roboto";
-    text-align: center;
-    font-weight: 550;
-    font-size: 70px;
-    position: static;
-}
 
 swiper{
     width: 100%;;
     height: 70vh;
     padding: 20PX 0px;
   
-  }
+}
+
+
   .slider{
-      width: 100%;
+      max-width: 70%;  
       height: 100%;
-      background-size: cover;
+      background-size: 75%;
       background-repeat: no-repeat;
-      background-position: center center;
+      background-position: center right;
+      z-index: auto;
+
+    .textSwiper{
+        padding: 0px 0px 0px 30px;
+        background-color: #fff;
+        max-width: 25%;
+        p {
+            font-weight: 400;
+        }
+    }
+    .titleSwiper{
+        padding: 60px 0px 0px 30px;
+        background-color: #fff;
+        max-width: 25%;
+        p {
+            
+            text-align: center;
+            text-transform: uppercase;
+        } 
+    }
 }
 
 img{
@@ -32,22 +47,88 @@ p{
     font-size: 20px;
     padding: 10px;
     font-family: "Roboto";
+    font-weight: 550;
 }
 
-button{
-    padding: 5px 20px;
-    background-color: transparent;
-    border: 3px solid #000;
-    font-size: 20px!important;
-    font-weight: 700;
-    color: #000;
-    font-family: "Roboto";
 
-}
-button:hover{
-    background-color: #de77a6;
-    color: white;
-}
 .infoButton{
-    padding: 20px;
+    padding: 40px;
+    button{
+        padding: 5px 20px;
+        background-color: transparent;
+        border: 3px solid #000;
+        font-size: 20px !important;
+        font-weight: 550;
+        color: #000;
+        font-family: "Roboto";
+    
+    }
+    button:hover{
+        background-color: #de77a6;
+        color: white;
+    }
 }
+
+
+
+//--formulario
+form{
+   
+    width: 80%;
+    padding: 1%;
+    .containerData{
+        padding: 10px;
+    }
+    .containerMessage{
+        padding: 10px;
+        textarea {
+            background-color: rgba(255,255,255,.2);
+            height: 250px;
+        }
+        
+    }
+    .buttonForm{
+        padding: 10px;
+        button{
+            width: 20%;
+            padding: 5px 20px;
+            background-color: transparent;
+            border: 3px solid #000;
+            font-size: 20px !important;
+            font-weight: 550;
+            color: #000;
+            font-family: "Roboto";
+        }
+        button:hover{
+            background-color: gray;
+            color: white;
+        }
+    }
+
+}
+
+h3{
+    font-size: 20px;
+    padding: 10px;
+    font-family: "Roboto";
+    font-weight: 550;
+    padding: 20PX;
+    text-align: center;
+}
+    //Cambio de color de la apariencia de mat-form-field
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: black!important;
+}
+
+::ng-deep .mat-input-element {
+    caret-color: black!important;
+}
+
+mat-label{
+    font-size: 20px;
+    padding: 10px;
+    font-family: "Roboto";
+    font-weight: 550;
+
+}
+//formulario--

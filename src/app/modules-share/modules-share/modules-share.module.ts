@@ -6,9 +6,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import { GoogleMapsModule } from '@angular/google-maps';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatGridListModule} from '@angular/material/grid-list';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDividerModule} from '@angular/material/divider';
 const materials =[
   MatMenuModule,
   FlexLayoutModule,
@@ -16,8 +18,11 @@ const materials =[
   MatIconModule,
   MatListModule,
   GoogleMapsModule,
-  MatGridListModule
-  
+  MatGridListModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule,
+  MatDividerModule
 ]
 
 @NgModule({

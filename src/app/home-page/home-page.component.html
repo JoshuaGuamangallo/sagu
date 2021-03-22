@@ -1,10 +1,13 @@
 <div>
     <div  fxLayout="row" fxLayoutAlign="center center" >
         <swiper [config]="configs" fxLayoutAlign="center center">
-            <div class="slider" *ngFor="let item of dataHomepage" [style.background-image]="'url('+item.swiper+')'"> 
-                <P  fxLayoutAlign="start center">Nosotros tambien somos tu familia
-                    ,
-                </P>           
+            <div class="slider" *ngFor="let item of dataHomepage" [style.background-image]="'url('+item.swiper+')'" fxLayout="column" > 
+                <div fxLayoutAlign="start center" class="titleSwiper">  
+                <p >{{item.titulo}} </p>
+                </div>
+                <div fxLayoutAlign="start center" class="textSwiper">  
+                <p >{{item.texto}}</p>
+                </div>
             </div>
             
         </swiper> 
@@ -44,6 +47,39 @@
           </mat-grid-list>
     </div>
     <div class="infoButton" fxLayoutAlign="center center">
-        <button mat-stroked-button>MÁS INFORMACIÓN</button>
-    </div>   
+        <button  mat-stroked-button>MÁS INFORMACIÓN</button>
+    </div> 
+    <mat-divider></mat-divider>
+    <div class="contact" fxLayoutAlign="center center" fxLayout="column">
+        <h3>CONTACTANOS</h3>
+        <form fxLayout="column" >
+            <div fxFlex=100 >
+                <div fxFlex="50%" fxLayout="column" class="containerData">
+                    <mat-label>Nombre</mat-label>
+                <mat-form-field appearance="outline"  class="formName">
+                    <input matInput >
+                </mat-form-field>
+                <mat-label>Correo electronico</mat-label>
+                <mat-form-field appearance="outline"  class="formEmail">
+                    <input matInput >
+                </mat-form-field>
+                <mat-label>Teléfono</mat-label>
+                <mat-form-field appearance="outline" class="formPhone">
+                    <input matInput ng-touched >
+                </mat-form-field>
+                </div>
+                <div fxFlex="50%" fxLayout="column" class="containerMessage">
+                <mat-label>Mensaje</mat-label>
+                <mat-form-field appearance="outline" class="formMessage">
+                    
+                    <textarea matInput ></textarea>
+                </mat-form-field>
+                </div>
+            </div>
+            <div fxLayout="column" class="buttonForm" >
+            <button  mat-stroked-button>Enviar
+            </button>
+            </div>
+        </form>
+    </div>  
 </div>
