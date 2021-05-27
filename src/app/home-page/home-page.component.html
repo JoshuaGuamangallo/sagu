@@ -1,85 +1,76 @@
 <div>
-    <div  fxLayout="row" fxLayoutAlign="center center" >
+    <div fxLayout="row" fxLayoutAlign="center center">
         <swiper [config]="configs" fxLayoutAlign="center center">
-            <div class="slider" *ngFor="let item of dataHomepage" [style.background-image]="'url('+item.swiper+')'" fxLayout="column" > 
-                <div fxLayoutAlign="start center" class="titleSwiper">  
-                <p >{{item.titulo}} </p>
+            <div class="slider" *ngFor="let item of dataHomepage" [style.background-image]="'url('+item.swiper+')'"
+                fxLayout="column">
+                <div fxLayoutAlign="center center" class="titleSwiper">
+                    <p>{{item.titulo}} </p>
                 </div>
-                <div fxLayoutAlign="start center" class="textSwiper">  
-                <p >{{item.texto}}</p>
+                <div fxLayoutAlign="center
+                
+                center" class="textSwiper">
+                    <p>{{item.texto}}</p>
                 </div>
             </div>
-            
-        </swiper> 
-    </div>   
+
+        </swiper>
+    </div>
     <div>
-        <mat-grid-list cols="3" rowHeight="2:1" >
-            <mat-grid-tile >
-                <div fxLayout="column" fxLayoutAlign="center center">
-                    <img src="../../assets/Icons/consultation.png" alt="">
-                    <p>Consultas</p>
+        <mat-grid-list cols="3" rowHeight="2:1">
+            <mat-grid-tile *ngFor="let item of dataServices">
+                <div fxLayout="column" fxLayoutAlign="center center"  >
+                    <img class="icon" src="{{item.icon}}" alt="">
+                    <p>{{item.service}}</p>
                 </div>
             </mat-grid-tile>
-            <mat-grid-tile>
-                <div fxLayout="column" fxLayoutAlign="center center">
-                    <img src="../../assets/Icons/medicine.png" alt="">
-                    <p>Medicina preventiva</p>
-                </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div fxLayout="column" fxLayoutAlign="center center">
-                    <img src="../../assets/Icons/General.png" alt="">
-                    <p>Cirugía General</p>
-                </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div fxLayout="column" fxLayoutAlign="center center">
-                    <img src="../../assets/Icons/laboratory.png  " alt="">
-                    <p>Servicio de laboratorio</p>
-                </div>
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <div fxLayout="column" fxLayoutAlign="center center">
-                    <img src="../../assets/Icons/ultrasound.png" alt="">  
-                    <p>Ecografía e Imagenología</p>
-                </div> 
-            </mat-grid-tile>
-          </mat-grid-list>
+        </mat-grid-list>
     </div>
     <div class="infoButton" fxLayoutAlign="center center">
-        <button  mat-stroked-button>MÁS INFORMACIÓN</button>
-    </div> 
+        <button mat-stroked-button routerLink="/service" >MÁS INFORMACIÓN</button>
+    </div>
     <mat-divider></mat-divider>
+    <div  class="gallery" > 
+        <div fxLayout="row" fxLayoutAlign="center center" class="galleryTitle">
+            <p>MIRA NUESTRO TRABAJO</p>
+        </div>  
+        <div fxLayout="row"  fxLayoutAlign="space-around center" class="photos">    
+            <div *ngFor="let item of datagallery" >
+                <img src="{{item.photos}}">
+            </div>
+        </div>
+   </div>
+   <mat-divider></mat-divider>
     <div class="contact" fxLayoutAlign="center center" fxLayout="column">
         <h3>CONTACTANOS</h3>
-        <form fxLayout="column" >
-            <div fxFlex=100 >
+        <form fxLayout="column">
+            <div fxFlex=100>
                 <div fxFlex="50%" fxLayout="column" class="containerData">
                     <mat-label>Nombre</mat-label>
-                <mat-form-field appearance="outline"  class="formName">
-                    <input matInput >
-                </mat-form-field>
-                <mat-label>Correo electronico</mat-label>
-                <mat-form-field appearance="outline"  class="formEmail">
-                    <input matInput >
-                </mat-form-field>
-                <mat-label>Teléfono</mat-label>
-                <mat-form-field appearance="outline" class="formPhone">
-                    <input matInput ng-touched >
-                </mat-form-field>
+                    <mat-form-field appearance="outline" class="formName">
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-label>Correo electronico</mat-label>
+                    <mat-form-field appearance="outline" class="formEmail">
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-label>Teléfono</mat-label>
+                    <mat-form-field appearance="outline" class="formPhone">
+                        <input matInput ng-touched>
+                    </mat-form-field>
                 </div>
                 <div fxFlex="50%" fxLayout="column" class="containerMessage">
-                <mat-label>Mensaje</mat-label>
-                <mat-form-field appearance="outline" class="formMessage">
-                    
-                    <textarea matInput ></textarea>
-                </mat-form-field>
+                    <mat-label>Mensaje</mat-label>
+                    <mat-form-field appearance="outline" class="formMessage">
+
+                        <textarea matInput></textarea>
+                    </mat-form-field>
                 </div>
             </div>
-            <div fxLayout="column" class="buttonForm" >
-            <button  mat-stroked-button>Enviar
-            </button>
+            <div fxLayout="column" class="buttonForm">
+                <button mat-stroked-button>Enviar
+                </button>
             </div>
         </form>
-    </div>  
+
+    </div>
 </div>

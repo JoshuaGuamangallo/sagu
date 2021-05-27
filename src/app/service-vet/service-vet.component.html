@@ -1,0 +1,16 @@
+<div>
+    <div>
+        <div  fxFlex="column" >
+            <div  fxLayout="row" fxLayoutAlign="center center" *ngFor="let item of dataServices;let textPosition = odd"  [ngClass]="{container1:textPosition }"  >
+                <div fxFlex="50"  fxLayout="column" fxLayoutAlign="center center" class="text" id="textContainer">
+                    
+                    <h1>{{item.service}}</h1>
+                    <p>{{item.description}}</p>
+                </div>
+                <div fxFlex="50" fxLayoutAlign="center center" class="icon " id="iconContainer">
+                    <img src="{{item.icon}}" >
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>

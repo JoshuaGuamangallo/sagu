@@ -18,6 +18,7 @@ import {
   AngularFirestore,
 } from "@angular/fire/firestore";
 import { AngularFireStorageModule } from "@angular/fire/storage";
+import { ServiceVetComponent } from './service-vet/service-vet.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -30,6 +31,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MenuComponent,
     FooterComponent,
     HomePageComponent,
+    ServiceVetComponent,
     
   ],
   imports: [

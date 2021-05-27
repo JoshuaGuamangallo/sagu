@@ -21,6 +21,8 @@ swiper{
         max-width: 25%;
         p {
             font-weight: 400;
+            font-family:  Calibri;
+            text-align: center;
         }
     }
     .titleSwiper{
@@ -28,20 +30,22 @@ swiper{
         background-color: #fff;
         max-width: 25%;
         p {
-            
-            text-align: center;
             text-transform: uppercase;
+            font-family:  Calibri;
+            text-align: center;
         } 
     }
 }
-
-img{
+.icon{
     width: 100px; height: 100px;
     /* filter: grayscale(5%) hue-rotate(150deg); */
     filter: grayscale(100%);
     color: #000;
+    transition: 1s;
+    
 }
  
+
 
 p{
     font-size: 20px;
@@ -131,4 +135,24 @@ mat-label{
     font-weight: 550;
 
 }
-//formulario--
+
+.gallery{
+    .galleryTitle{
+        padding: 10px;
+    }
+    .photos{
+        padding-bottom: 10px;
+
+        img{
+            -webkit-box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.75);
+            box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.75);
+            margin-bottom:10px;
+            height: 40vh;
+            width: 20vw;
+        }
+    
+    }
+
+
+}

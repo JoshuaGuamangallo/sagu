@@ -1,9 +1,12 @@
+import { ServiceService } from './../services/service.service';
+import { Services } from './../modules/services';
+import { GalleryModule } from './../modules/gallery-module';
+import { GalleryService } from './../services/gallery.service';
 import { HomePageService } from './../services/home-page.service';
 import { HomepageModule } from './../modules/homepage-module';
 import { Component, OnInit } from '@angular/core';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { Observable, Subscription } from 'rxjs';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 
 @Component({
@@ -44,13 +47,26 @@ export class HomePageComponent implements OnInit {
   };
 
   dataHomepage: HomepageModule[];
+  datagallery: GalleryModule[];
+  dataServices: Services[];
   connection: Subscription = new Subscription();
   constructor(
-    public service: HomePageService
+    public serviceHomePage: HomePageService,
+    public serviceGallery: GalleryService,
+    public serviceService: ServiceService,
   ) {
-    this.connection = this.service.ReadAllDataHomepage().subscribe((returnData)=>{
+    this.connection = this.serviceHomePage.ReadAllDataHomepage().subscribe((returnData)=>{
       this.dataHomepage =returnData;
-      console.log(this.dataHomepage);
+
+    }),
+    this.connection = this.serviceGallery.ReadAllDatagallery().subscribe((returnData)=>{
+      this.datagallery =returnData;
+
+    }),
+    
+    this.connection = this.serviceService.ReadAllDataServices().subscribe((returnData)=>{
+      this.dataServices =returnData;
+
     })
    }
 
